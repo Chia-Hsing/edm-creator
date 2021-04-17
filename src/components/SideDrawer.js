@@ -21,7 +21,7 @@ const SideDrawer = () => {
                 valid: false,
                 touched: false,
             },
-            subtitleOne: {
+            subtitle_one: {
                 eleType: 'input',
                 eleConfig: {
                     type: 'text',
@@ -34,7 +34,14 @@ const SideDrawer = () => {
                 valid: false,
                 touched: false,
             },
-            contentOne: {
+            button_one: {
+                eleType: 'checkbox',
+                eleConfig: {
+                    type: 'checkbox',
+                },
+                tick: false,
+            },
+            content_one: {
                 eleType: 'textarea',
                 eleConfig: {
                     placeholder: 'content',
@@ -46,7 +53,7 @@ const SideDrawer = () => {
                 valid: false,
                 touched: false,
             },
-            subtitleTwo: {
+            subtitle_two: {
                 eleType: 'input',
                 eleConfig: {
                     type: 'text',
@@ -59,7 +66,7 @@ const SideDrawer = () => {
                 valid: false,
                 touched: false,
             },
-            contentTwo: {
+            content_two: {
                 eleType: 'textarea',
                 eleConfig: {
                     placeholder: 'content',
@@ -70,6 +77,13 @@ const SideDrawer = () => {
                 },
                 valid: false,
                 touched: false,
+            },
+            button_two: {
+                eleType: 'checkbox',
+                eleConfig: {
+                    type: 'checkbox',
+                },
+                tick: false,
             },
         },
     })
@@ -77,33 +91,51 @@ const SideDrawer = () => {
 
     // as the user types in, change the input states
     const inputChangeHandler = (e, controlName) => {
-        const updatedControls = updateObj(input.controls, {
-            [controlName]: updateObj(input.controls[controlName], {
-                val: e.target.value,
-                touched: true,
-                valid: checkValidity(e.target.value, input.controls[controlName].validation),
-            }),
-        })
+        // exclude button properties
+        if (!input.controls[controlName].tick) {
+            const updatedControls = updateObj(input.controls, {
+                [controlName]: updateObj(input.controls[controlName], {
+                    val: e.target.value,
+                    touched: true,
+                    valid: checkValidity(e.target.value, input.controls[controlName].validation),
+                }),
+            })
 
-        setInput({ controls: updatedControls })
+            setInput({ controls: updatedControls })
+        }
+
+        // button properties
+        if (e.target.checked) {
+            const updatedControls = updateObj(input.controls, {
+                [controlName]: updateObj(input.controls[controlName], {
+                    tick: true,
+                }),
+            })
+            setInput({ controls: updatedControls })
+        }
     }
 
     // add edm section
-    const submitHandler = e => {
+    const submitHandler = async e => {
         e.preventDefault()
 
         let formData = {}
-        let stateKeys = []
 
-        for (let key in input.controls) {
-            stateKeys.push(key)
-        }
+        const inputStateKeys = ['title', 'subtitle_one', 'subtitle_two', 'content_one', 'content_two']
 
-        stateKeys.forEach(stateKey => {
-            formData[stateKey] = input.controls[stateKey].val
+        inputStateKeys.forEach(inputStateKey => {
+            formData[inputStateKey] = input.controls[inputStateKey].val
+            input.controls[inputStateKey].val = ''
         })
 
-        setSection({ type: 'ADD_SECTION', payload: formData })
+        const buttonStateKeys = ['button_one', 'button_two']
+
+        buttonStateKeys.forEach(buttonStateKey => {
+            formData[buttonStateKey] = input.controls[buttonStateKey].tick
+            input.controls[buttonStateKey].tick = false
+        })
+
+        await setSection({ type: 'ADD_SECTION', payload: formData })
     }
 
     // remove edm section
@@ -133,17 +165,21 @@ const SideDrawer = () => {
                 touched={ele.config.touched}
                 shouldValidate={ele.config.validation}
                 inputChange={e => inputChangeHandler(e, ele.key)}
+                ticked={ele.config.tick}
             />
         )
     })
 
     return (
-        <section>
+        <section className="sideDrawer">
+            <h4>EDM Creator</h4>
             <form onSubmit={submitHandler}>
                 {form}
                 <button>add section</button>
             </form>
-            <button onClick={removeSectionHandler}>remove section</button>
+            <button disabled={section.sectionData.length <= 0} id="removeBtn" onClick={removeSectionHandler}>
+                remove section
+            </button>
         </section>
     )
 }

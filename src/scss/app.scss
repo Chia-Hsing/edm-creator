@@ -1,0 +1,95 @@
+.app {
+    display: flex;
+
+    .sideDrawer {
+        flex-basis: 20%;
+        padding: 1rem 3rem;
+        box-shadow: 1px 0px 2px #e7e7e7;
+        position: sticky;
+        height: 100vh;
+        top: 0;
+        left: 0;
+
+        h4 {
+            margin-bottom: 2rem;
+        }
+
+        form {
+            min-width: 80%;
+
+            label {
+                color: #797979;
+            }
+
+            .input,
+            .textarea {
+                margin-bottom: 1rem;
+                min-width: 100%;
+                border-radius: 5px;
+                border: 1px solid #e7e7e7;
+                padding: 0.5rem 0.8rem;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .input {
+                height: 1.5rem;
+            }
+
+            .textarea {
+                height: 4rem;
+            }
+
+            .checkbox {
+                height: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            button {
+                width: 100%;
+                height: 30px;
+                background-color: #f0d917;
+                border-radius: 5px;
+                border: 1px solid #e7e7e7;
+                cursor: pointer;
+                font-size: 0.7rem;
+                transition: 0.4s;
+                margin-bottom: 1rem;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: #fff7b0;
+                }
+            }
+        }
+
+        #removeBtn {
+            width: 100%;
+            height: 30px;
+            background-color: #eca03c;
+            border-radius: 5px;
+            border: 1px solid #e7e7e7;
+            cursor: pointer;
+            font-size: 0.7rem;
+            transition: 0.4s;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background-color: #f5ba83;
+            }
+        }
+    }
+
+    .edmPreview {
+        margin: 0 auto;
+        padding: 2em;
+    }
+}

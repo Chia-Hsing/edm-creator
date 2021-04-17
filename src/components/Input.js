@@ -1,65 +1,75 @@
 import React from 'react'
 
+import '../scss/app.scss'
+
 const Input = props => {
     let eleInput = null
-
-    let inputClass = ['input']
-
-    if (!props.isValid && props.shouldValidate && props.touched) {
-        inputClass.push('invalid')
-    }
-
-    if (props.value === '') {
-        inputClass.pop('invalid')
-    }
 
     switch (props.type) {
         case 'input':
             eleInput = (
                 <>
+                    <label htmlFor={props.label}>{props.label}</label>
+                    <br />
                     <input
-                        className={inputClass.join(' ')}
+                        id={props.label}
+                        className="input"
                         value={props.value}
                         {...props.config}
                         onChange={props.inputChange}
                     />
-                    <label className="labelName">{props.label}</label>
                 </>
             )
             break
         case 'textarea':
             eleInput = (
                 <>
+                    <label htmlFor={props.label}>{props.label}</label>
+                    <br />
                     <textarea
-                        className={inputClass.join(' ')}
+                        id={props.label}
+                        className="textarea"
                         value={props.value}
                         {...props.config}
                         onChange={props.inputChange}
                     />
-                    <label className="labelName">{props.label}</label>
+                </>
+            )
+            break
+        case 'checkbox':
+            eleInput = (
+                <>
+                    <label htmlFor={props.label}>{props.label}</label>
+                    <br />
+                    <input
+                        id={props.label}
+                        className="checkbox"
+                        {...props.config}
+                        onChange={props.inputChange}
+                        checked={props.ticked}
+                    />
+                    <br />
                 </>
             )
             break
         default:
             eleInput = (
                 <>
+                    <label htmlFor={props.label}>{props.label}</label>
+                    <br />
                     <input
-                        className={inputClass.join(' ')}
+                        id={props.label}
+                        className="input"
                         value={props.value}
                         {...props.config}
                         onChange={props.inputChange}
                     />
-
-                    <label className="labelName">
-                        {props.error && <span className="errorMSG">{props.error[props.label]}</span>}
-                        <span className="contentName">{props.label}</span>
-                    </label>
                 </>
             )
             break
     }
 
-    return <div>{eleInput}</div>
+    return <>{eleInput}</>
 }
 
 export default Input

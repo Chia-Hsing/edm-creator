@@ -1,9 +1,11 @@
 import SideDrawer from './components/SideDrawer'
-import EDMPreview from './components/edmPreview/EDMPreview'
+import EDMPreview from './components/edm/EDMPreview'
+
+import './scss/app.scss'
 
 export default function App() {
     return (
-        <div className="App">
+        <div className="app">
             <SideDrawer />
             <EDMPreview />
         </div>
