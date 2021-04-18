@@ -3,27 +3,29 @@
 
     .sideDrawer {
         flex-basis: 20%;
-        padding: 1rem 3rem;
-        box-shadow: 1px 0px 2px #e7e7e7;
+        padding: 1rem 3rem 2rem;
+        box-shadow: 2px 0px 5px -3px #4e4e4e;
         position: sticky;
-        height: 100vh;
+        height: 100%;
         top: 0;
         left: 0;
+        background-color: #ffffff;
 
         h4 {
-            margin-bottom: 2rem;
+            margin-bottom: 1.7rem;
         }
 
         form {
             min-width: 80%;
 
             label {
-                color: #797979;
+                color: #4e4e4e;
+                margin: 0 5px;
             }
 
             .input,
             .textarea {
-                margin-bottom: 1rem;
+                margin-bottom: 0.8rem;
                 min-width: 100%;
                 border-radius: 5px;
                 border: 1px solid #e7e7e7;
@@ -35,11 +37,11 @@
             }
 
             .input {
-                height: 1.5rem;
+                height: 1rem;
             }
 
             .textarea {
-                height: 4rem;
+                height: 3rem;
             }
 
             .checkbox {
@@ -50,11 +52,11 @@
             button {
                 width: 100%;
                 height: 30px;
-                background-color: #f0d917;
+                background-color: #f7c242;
                 border-radius: 5px;
                 border: 1px solid #e7e7e7;
                 cursor: pointer;
-                font-size: 0.7rem;
+                font-size: 1rem;
                 transition: 0.4s;
                 margin-bottom: 1rem;
 
@@ -63,7 +65,7 @@
                 }
 
                 &:hover {
-                    background-color: #fff7b0;
+                    background-color: #fad689;
                 }
             }
         }
@@ -71,11 +73,11 @@
         #removeBtn {
             width: 100%;
             height: 30px;
-            background-color: #eca03c;
+            background-color: #fb966e;
             border-radius: 5px;
             border: 1px solid #e7e7e7;
             cursor: pointer;
-            font-size: 0.7rem;
+            font-size: 1rem;
             transition: 0.4s;
 
             &:focus {
@@ -83,7 +85,7 @@
             }
 
             &:hover {
-                background-color: #f5ba83;
+                background-color: #fab79d;
             }
         }
     }

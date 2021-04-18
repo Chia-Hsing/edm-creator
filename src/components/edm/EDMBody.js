@@ -36,7 +36,13 @@ const EDMBody = props => {
                 </tr>
                 <tr>
                     <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
-                        {props.buttonOne ? <button style={learnMoreBtn}>LEARN MORE</button> : null}
+                        {props.buttonOne ? (
+                            <button style={learnMoreBtn}>
+                                <a href={props.urlOne} target="blank" style={{ textDecoration: 'none', color: '#fff' }}>
+                                    LEARN MORE
+                                </a>
+                            </button>
+                        ) : null}
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +53,13 @@ const EDMBody = props => {
                 </tr>
                 <tr>
                     <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
-                        {props.buttonTwo ? <button style={learnMoreBtn}>LEARN MORE</button> : null}
+                        {props.buttonTwo ? (
+                            <button style={learnMoreBtn}>
+                                <a href={props.urlTwo} target="blank" style={{ textDecoration: 'none', color: '#fff' }}>
+                                    LEARN MORE
+                                </a>
+                            </button>
+                        ) : null}
                     </td>
                 </tr>
             </tbody>

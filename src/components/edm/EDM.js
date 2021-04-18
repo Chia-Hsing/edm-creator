@@ -20,6 +20,8 @@ const EDM = () => {
                 contentTwo={item.content_two}
                 buttonOne={item.button_one}
                 buttonTwo={item.button_two}
+                urlOne={item.set_url_one}
+                urlTwo={item.set_url_Two}
             />
         )
     })
@@ -30,7 +32,7 @@ const EDM = () => {
                 See the latest features in Data Studio and explore tips and best practices from our team and fellow
                 users.
             </div>
-            <div style={{ backgroundColor: '#EEEEEE', padding: '.1rem' }}>
+            <div style={{ backgroundColor: 'rgba(158, 165, 177, 0.411)', padding: '.1rem' }}>
                 <EDMHeader />
                 <EDMBanner />
                 {sections}
