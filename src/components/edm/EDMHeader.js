@@ -5,20 +5,22 @@ import dataStudio from '../../assets/img/unnamed-1.png'
 
 const EDMHeader = () => {
     const googleLogoStyle = {
-        width: '100%',
+        width: '100px',
         height: 'auto',
+        display: 'block',
     }
 
     const dataStudioStyle = {
-        width: '25%',
+        width: '150px',
+        height: 'auto',
         float: 'right',
+        display: 'block',
     }
 
     const headerStyle = {
         width: '100%',
         height: '5rem',
-        margin: '0 auto',
-        padding: '1rem',
+        border: '1rem solid transparent',
         backgroundColor: '#fff',
         boxShadow: '2px 2px 2px #D6D6D6',
     }

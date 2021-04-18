@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 
 import Input from './Input'
-import { updateObj, checkValidity } from '../utils/utilities'
+import { updateObj } from '../utils/utilities'
 import { context } from '../index'
 
 const SideBar = () => {
@@ -15,10 +15,6 @@ const SideBar = () => {
                     placeholder: 'title',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
             subtitle_one: {
                 eleType: 'input',
@@ -27,10 +23,6 @@ const SideBar = () => {
                     placeholder: 'subtitle',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
             content_one: {
                 eleType: 'textarea',
@@ -38,10 +30,6 @@ const SideBar = () => {
                     placeholder: 'content',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
             button_one: {
                 eleType: 'checkbox',
@@ -57,10 +45,6 @@ const SideBar = () => {
                     placeholder: 'url',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
             subtitle_two: {
                 eleType: 'input',
@@ -69,10 +53,6 @@ const SideBar = () => {
                     placeholder: 'subtitle',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
             content_two: {
                 eleType: 'textarea',
@@ -80,10 +60,6 @@ const SideBar = () => {
                     placeholder: 'content',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
             button_two: {
                 eleType: 'checkbox',
@@ -99,10 +75,6 @@ const SideBar = () => {
                     placeholder: 'url',
                 },
                 val: '',
-                validation: {
-                    isRequired: true,
-                },
-                valid: false,
             },
         },
         setUrl: {
@@ -115,17 +87,10 @@ const SideBar = () => {
     // as the user types in, change the input states
     const inputChangeHandler = (e, controlName) => {
         // exclude button properties
-        if (
-            input.controls[controlName].eleType === 'input' ||
-            input.controls[controlName].eleType === 'textarea' ||
-            input.controls[controlName].eleType === 'set_url_input_one' ||
-            input.controls[controlName].eleType === 'set_url_input_two'
-        ) {
+        if (input.controls[controlName].eleType !== 'checkbox') {
             const updatedControls = updateObj(input.controls, {
                 [controlName]: updateObj(input.controls[controlName], {
                     val: e.target.value,
-                    touched: true,
-                    valid: checkValidity(e.target.value, input.controls[controlName].validation),
                 }),
             })
 
@@ -208,7 +173,6 @@ const SideBar = () => {
                 value={ele.config.val}
                 type={ele.config.eleType}
                 config={ele.config.eleConfig}
-                isValid={ele.config.valid}
                 inputChange={e => inputChangeHandler(e, ele.key)}
                 ticked={ele.config.tick}
                 setUrlOne={input.setUrl.button_one}

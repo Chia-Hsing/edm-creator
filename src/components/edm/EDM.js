@@ -4,6 +4,7 @@ import { context } from '../../index'
 import EDMHeader from './EDMHeader'
 import EDMBanner from './EDMBanner'
 import EDMBody from './EDMBody'
+import EDMContactInfo from './EDMContactInfo'
 import EDMFooter from './EDMFooter'
 
 const EDM = () => {
@@ -36,6 +37,7 @@ const EDM = () => {
                 <EDMHeader />
                 <EDMBanner />
                 {sections}
+                <EDMContactInfo />
                 <EDMFooter />
             </div>
         </div>

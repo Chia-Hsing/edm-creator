@@ -5,10 +5,9 @@ const EDMFooter = () => {
         width: '100%',
         height: '13rem',
         margin: '0 auto',
-        padding: '3rem 1.5rem',
+        border: '3rem solid transparent',
         backgroundColor: '#fff',
         boxShadow: '2px 2px 2px #D6D6D6',
-        textAlign: 'center',
         color: '#797979',
     }
 
@@ -16,12 +15,12 @@ const EDMFooter = () => {
         <table style={footerStyle}>
             <tbody style={{ height: '20%' }}>
                 <tr>
-                    <td>
+                    <td style={{ textAlign: 'center' }}>
                         <font size="1">© 2019 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043</font>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td style={{ textAlign: 'center' }}>
                         <font size="1">
                             This email was sent to <a href="chien41@gmail.com">chien41@gmail.com</a> because you
                             indicated that you want to receive announcements about the latest changes, enhancements, and

@@ -6,8 +6,11 @@ const EDMBody = props => {
         margin: '1rem auto',
         backgroundColor: '#fff',
         boxShadow: '2px 2px 2px #D6D6D6',
-        padding: '1rem 2rem',
-        lineHeight: '1.5rem',
+        border: '1.5rem solid transparent',
+        lineHeight: '1.7rem',
+        cellspacing: '0',
+        cellpadding: '0',
+        align: 'center',
     }
 
     const learnMoreBtn = {
@@ -24,44 +27,54 @@ const EDMBody = props => {
     return (
         <table style={sectionStyle}>
             <tbody>
-                <tr>
-                    <th style={{ textAlign: 'left', color: '#3B75FA', fontWeight: '800' }}>{props.title}</th>
-                </tr>
-
-                <tr>
-                    <td style={{ color: '#4E4E4E' }}>
-                        <h4>{props.subtitleOne}</h4>
-                        <p>{props.contentOne}</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
-                        {props.buttonOne ? (
+                {props.title ? (
+                    <tr>
+                        <th style={{ textAlign: 'left', color: '#3B75FA', fontWeight: '800' }}>{props.title}</th>
+                    </tr>
+                ) : null}
+                {props.subtitleOne ? (
+                    <tr>
+                        <th style={{ color: '#4E4E4E', textAlign: 'left' }}>{props.subtitleOne}</th>
+                    </tr>
+                ) : null}
+                {props.contentOne ? (
+                    <tr>
+                        <td style={{ color: '#4E4E4E' }}>{props.contentOne}</td>
+                    </tr>
+                ) : null}
+                {props.buttonOne ? (
+                    <tr>
+                        <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
                             <button style={learnMoreBtn}>
                                 <a href={props.urlOne} target="blank" style={{ textDecoration: 'none', color: '#fff' }}>
                                     LEARN MORE
                                 </a>
                             </button>
-                        ) : null}
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{ color: '#4E4E4E' }}>
-                        <h4>{props.subtitleTwo}</h4>
-                        <p>{props.contentTwo}</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
-                        {props.buttonTwo ? (
+                        </td>
+                    </tr>
+                ) : null}
+
+                {props.subtitleTwo ? (
+                    <tr>
+                        <th style={{ color: '#4E4E4E', textAlign: 'left' }}>{props.subtitleTwo}</th>
+                    </tr>
+                ) : null}
+                {props.contentTwo ? (
+                    <tr>
+                        <td style={{ color: '#4E4E4E' }}>{props.contentTwo}</td>
+                    </tr>
+                ) : null}
+                {props.buttonTwo ? (
+                    <tr>
+                        <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
                             <button style={learnMoreBtn}>
                                 <a href={props.urlTwo} target="blank" style={{ textDecoration: 'none', color: '#fff' }}>
                                     LEARN MORE
                                 </a>
                             </button>
-                        ) : null}
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
+                ) : null}
             </tbody>
         </table>
     )
