@@ -1,7 +1,5 @@
 import React from 'react'
 
-import mainBanner from '../../assets/img/unnamed-2.png'
-
 const EDMBanner = () => {
     const imgStyle = {
         width: '100%',
@@ -30,7 +28,11 @@ const EDMBanner = () => {
             <tbody>
                 <tr>
                     <td>
-                        <img src={mainBanner} alt="mainBanner" style={imgStyle}></img>
+                        <img
+                            src="https://drive.google.com/uc?export=view&id=1Wg9ifxngw0IEUKpeJ5JC9oElyj4GCC-L"
+                            alt="mainBanner"
+                            style={imgStyle}
+                        ></img>
                     </td>
                 </tr>
             </tbody>

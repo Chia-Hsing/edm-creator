@@ -1,8 +1,5 @@
 import React from 'react'
 
-import google from '../../assets/img/unnamed.png'
-import dataStudio from '../../assets/img/unnamed-1.png'
-
 const EDMHeader = () => {
     const googleLogoStyle = {
         width: '100px',
@@ -30,10 +27,18 @@ const EDMHeader = () => {
             <tbody>
                 <tr>
                     <td>
-                        <img src={google} alt="google logo" style={googleLogoStyle}></img>
+                        <img
+                            src="https://drive.google.com/uc?export=view&id=1-dPtuw1Q6pAxnqMTWS2xn8IYAipoBypa"
+                            alt="google logo"
+                            style={googleLogoStyle}
+                        ></img>
                     </td>
                     <td>
-                        <img src={dataStudio} alt="data studio img" style={dataStudioStyle}></img>
+                        <img
+                            src="https://drive.google.com/uc?export=view&id=1gL4soqzvz_cas4vhvxQbYnmHSAGkMN0S"
+                            alt="data studio img"
+                            style={dataStudioStyle}
+                        ></img>
                     </td>
                 </tr>
             </tbody>
