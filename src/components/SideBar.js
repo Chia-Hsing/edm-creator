@@ -4,7 +4,7 @@ import Input from './Input'
 import { updateObj } from '../utils/utilities'
 import { context } from '../index'
 
-const SideBar = () => {
+const SideBar = props => {
     // the states control the input behavior
     const [input, setInput] = useState({
         controls: {
@@ -188,9 +188,14 @@ const SideBar = () => {
                 {form}
                 <button>add section</button>
             </form>
-            <button disabled={section.sectionData.length <= 0} id="removeBtn" onClick={removeSectionHandler}>
-                remove section
-            </button>
+            <div className="btnGp">
+                <button disabled={section.sectionData.length <= 0} id="removeBtn" onClick={removeSectionHandler}>
+                    remove section
+                </button>
+                <button id="downloadBtn" onClick={props.downloadHtml}>
+                    download html file
+                </button>
+            </div>
         </section>
     )
 }

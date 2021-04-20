@@ -7,7 +7,7 @@ import EDMBody from './EDMBody'
 import EDMContactInfo from './EDMContactInfo'
 import EDMFooter from './EDMFooter'
 
-const EDM = () => {
+const EDM = props => {
     const section = useContext(context)
 
     let sections = section[0].sectionData.map((item, i) => {
@@ -28,19 +28,31 @@ const EDM = () => {
     })
 
     return (
-        <div className="edm" style={{ width: '600px' }}>
-            <div style={{ width: '98%', margin: '1rem auto', textAlign: 'center', fontSize: '.3em' }}>
-                See the latest features in Data Studio and explore tips and best practices from our team and fellow
-                users.
-            </div>
-            <div style={{ backgroundColor: 'rgba(158, 165, 177, 0.411)', padding: '.1rem' }}>
-                <EDMHeader />
-                <EDMBanner />
-                {sections}
-                <EDMContactInfo />
-                <EDMFooter />
-            </div>
-        </div>
+        <main className="edmPreview" ref={props.edm}>
+            <section>
+                <div
+                    className="edm"
+                    style={{
+                        width: '600px',
+                        fontFamily:
+                            'Segoe UI, Roboto,Oxygen,Ubuntu,Cantarell, Fira Sans, Droid Sans,Helvetica Neue,sans-serif',
+                        margin: '0',
+                    }}
+                >
+                    <div style={{ width: '98%', margin: '1rem auto', textAlign: 'center', fontSize: '.3em' }}>
+                        See the latest features in Data Studio and explore tips and best practices from our team and
+                        fellow users.
+                    </div>
+                    <div style={{ backgroundColor: 'rgba(158, 165, 177, 0.411)', padding: '.1rem' }}>
+                        <EDMHeader />
+                        <EDMBanner />
+                        {sections}
+                        <EDMContactInfo />
+                        <EDMFooter />
+                    </div>
+                </div>
+            </section>
+        </main>
     )
 }
 

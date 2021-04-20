@@ -70,22 +70,34 @@
             }
         }
 
-        #removeBtn {
-            width: 100%;
-            height: 30px;
-            background-color: #fb966e;
-            border-radius: 5px;
-            border: 1px solid #e7e7e7;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: 0.4s;
+        .btnGp {
+            display: flex;
+            justify-content: space-between;
 
-            &:focus {
-                outline: none;
+            #removeBtn,
+            #downloadBtn {
+                flex-basis: 45%;
+                width: 100%;
+                height: 30px;
+                background-color: #ed784a;
+                border-radius: 5px;
+                border: 1px solid #e7e7e7;
+                cursor: pointer;
+                font-size: 0.8rem;
+                transition: 0.4s;
+                color: #fff;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: #fab79d;
+                }
             }
 
-            &:hover {
-                background-color: #fab79d;
+            #downloadBtn {
+                background-color: #d75455;
             }
         }
     }

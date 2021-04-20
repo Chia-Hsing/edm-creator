@@ -29,7 +29,7 @@ const EDMBanner = () => {
                 <tr>
                     <td>
                         <img
-                            src="https://drive.google.com/uc?export=view&id=1Wg9ifxngw0IEUKpeJ5JC9oElyj4GCC-L"
+                            src="http://drive.google.com/uc?export=view&id=1Wg9ifxngw0IEUKpeJ5JC9oElyj4GCC-L"
                             alt="mainBanner"
                             style={imgStyle}
                         ></img>

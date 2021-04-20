@@ -25,28 +25,44 @@ const EDMContactInfo = () => {
 
     return (
         <table style={contactInfoStyle}>
-            <table style={{ width: '100%', border: '2px solid #3B75FA', padding: '1.5rem' }}>
-                <tbody>
-                    <tr>
-                        <td>Thanks for reading our monthly update.</td>
-                    </tr>
-                    <tr>
-                        <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
-                            <button style={accessBtn}>
-                                <a href=" " target="blank" style={{ textDecoration: 'none', color: '#fff' }}>
-                                    ACCESS DATA STUDIO
-                                </a>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Happy Reporting,</td>
-                    </tr>
-                    <tr>
-                        <th style={{ textAlign: 'left' }}>The Google Data Studio Team</th>
-                    </tr>
-                </tbody>
-            </table>
+            <tbody>
+                <tr>
+                    <td>
+                        <table
+                            style={{
+                                width: '100%',
+                                border: '2px solid #3B75FA',
+                                padding: '1.5rem',
+                            }}
+                        >
+                            <tbody>
+                                <tr>
+                                    <td>Thanks for reading our monthly update.</td>
+                                </tr>
+                                <tr>
+                                    <td style={{ height: '4rem', verticalAlign: 'middle', textAlign: 'center' }}>
+                                        <button style={accessBtn}>
+                                            <a
+                                                href=" "
+                                                target="blank"
+                                                style={{ textDecoration: 'none', color: '#fff' }}
+                                            >
+                                                ACCESS DATA STUDIO
+                                            </a>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Happy Reporting,</td>
+                                </tr>
+                                <tr>
+                                    <th style={{ textAlign: 'left' }}>The Google Data Studio Team</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     )
 }
