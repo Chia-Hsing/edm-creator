@@ -2,7 +2,6 @@ import { updateObj } from '../utils/utilities'
 
 const addSection = (state, action) => {
     const updatedState = [...state.sectionData, action.payload]
-    console.log(updatedState)
     return updateObj(state, { sectionData: updatedState })
 }
 

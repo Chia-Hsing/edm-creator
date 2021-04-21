@@ -25,7 +25,7 @@ const EDMFooter = () => {
                             This email was sent to <a href="chien41@gmail.com">chien41@gmail.com</a> because you
                             indicated that you want to receive announcements about the latest changes, enhancements, and
                             new features from the Google Data Studio team. If you do not wish to receive such emails in
-                            the future, please unsubscribe <a href=" ">here</a>.
+                            the future, please unsubscribe <a href="https://www.google.com/">here</a>.
                         </font>
                     </td>
                 </tr>

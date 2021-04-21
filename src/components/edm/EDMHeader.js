@@ -27,18 +27,10 @@ const EDMHeader = () => {
             <tbody>
                 <tr>
                     <td>
-                        <img
-                            src="https://github.com/Chia-Hsing/edm-creator/blob/master/img/unnamed.png"
-                            alt="google logo"
-                            style={googleLogoStyle}
-                        ></img>
+                        <img src="https://i.imgur.com/wxVAHma.png" alt="google logo" style={googleLogoStyle}></img>
                     </td>
                     <td>
-                        <img
-                            src="https://github.com/Chia-Hsing/edm-creator/blob/master/img/unnamed-1.png"
-                            alt="data studio img"
-                            style={dataStudioStyle}
-                        ></img>
+                        <img src="https://i.imgur.com/FQMVFE3.png" alt="data studio img" style={dataStudioStyle}></img>
                     </td>
                 </tr>
             </tbody>

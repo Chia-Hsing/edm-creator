@@ -28,11 +28,7 @@ const EDMBanner = () => {
             <tbody>
                 <tr>
                     <td>
-                        <img
-                            src="http://drive.google.com/uc?export=view&id=1Wg9ifxngw0IEUKpeJ5JC9oElyj4GCC-L"
-                            alt="mainBanner"
-                            style={imgStyle}
-                        ></img>
+                        <img src="https://i.imgur.com/WCF8MeI.png" alt="mainBanner" style={imgStyle}></img>
                     </td>
                 </tr>
             </tbody>
