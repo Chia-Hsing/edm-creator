@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/edm-creator/static/css/main.0089a5a3.chunk.css",
+    "main.js": "/edm-creator/static/js/main.b96c5692.chunk.js",
+    "main.js.map": "/edm-creator/static/js/main.b96c5692.chunk.js.map",
+    "runtime-main.js": "/edm-creator/static/js/runtime-main.a632d1ae.js",
+    "runtime-main.js.map": "/edm-creator/static/js/runtime-main.a632d1ae.js.map",
+    "static/js/2.58c3d5aa.chunk.js": "/edm-creator/static/js/2.58c3d5aa.chunk.js",
+    "static/js/2.58c3d5aa.chunk.js.map": "/edm-creator/static/js/2.58c3d5aa.chunk.js.map",
+    "static/js/3.22ef8917.chunk.js": "/edm-creator/static/js/3.22ef8917.chunk.js",
+    "static/js/3.22ef8917.chunk.js.map": "/edm-creator/static/js/3.22ef8917.chunk.js.map",
+    "index.html": "/edm-creator/index.html",
+    "static/css/main.0089a5a3.chunk.css.map": "/edm-creator/static/css/main.0089a5a3.chunk.css.map",
+    "static/js/2.58c3d5aa.chunk.js.LICENSE.txt": "/edm-creator/static/js/2.58c3d5aa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a632d1ae.js",
+    "static/js/2.58c3d5aa.chunk.js",
+    "static/css/main.0089a5a3.chunk.css",
+    "static/js/main.b96c5692.chunk.js"
+  ]
+}
